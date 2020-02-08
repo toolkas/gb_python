@@ -19,20 +19,17 @@ while True:
 
     number = int(line)
 
-    if len(rating) == 0:
+    index = 0
+    while index < len(rating):
+        current = rating[index]
+        if current >= number:
+            index += 1
+            continue
+        break
+
+    if index > len(rating):
         rating.append(number)
     else:
-        index = 0
-        while index < len(rating):
-            current = rating[index]
-            if current >= number:
-                index += 1
-                continue
-            break
-
-        if index > len(rating):
-            rating.append(number)
-        else:
-            rating.insert(index, number)
+        rating.insert(index, number)
 
     print(f"Результат: {' '.join(map(str, rating))}")
