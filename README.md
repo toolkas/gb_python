@@ -1,2 +1,2 @@
 # gb_python
-Домашнее задание по Python (Geekbrains)
+Домашнее задание по Python (GeekBrains)
