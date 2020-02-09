@@ -13,7 +13,7 @@
 rating = []
 
 while True:
-    line = input("Введите целое число: ").strip()
+    line = input("Введите целое число или 'стоп', чтобы закончить: ").strip()
     if line == 'stop':
         break
 
@@ -22,14 +22,11 @@ while True:
     index = 0
     while index < len(rating):
         current = rating[index]
-        if current >= number:
-            index += 1
-            continue
-        break
+        if current < number:
+            break
+        index += 1
 
-    if index > len(rating):
-        rating.append(number)
-    else:
-        rating.insert(index, number)
+    print(f"rating.insert({index}, {number})")
+    rating.insert(index, number)
 
     print(f"Результат: {' '.join(map(str, rating))}")

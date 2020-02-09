@@ -4,6 +4,7 @@
 
 month = int(input("Введите номер месяца (от 1 до 12): "))
 
+# Решение задачи через dict
 season_by_month = {
     1: "зима",
     2: "зима",
@@ -19,28 +20,23 @@ season_by_month = {
     12: "зима",
 }
 
-season = season_by_month[month]
-print(f"Месяц {month} относится к времени года: {season}")
+print(f"Месяц {month} относится к времени года: {season_by_month[month]}")
 
-months_and_seasons = [
-    {"month": 1, "season": "зима"},
-    {"month": 2, "season": "зима"},
-    {"month": 3, "season": "весна"},
-    {"month": 4, "season": "весна"},
-    {"month": 5, "season": "весна"},
-    {"month": 6, "season": "лето"},
-    {"month": 7, "season": "лето"},
-    {"month": 8, "season": "лето"},
-    {"month": 9, "season": "осень"},
-    {"month": 10, "season": "осень"},
-    {"month": 11, "season": "осень"},
-    {"month": 12, "season": "зима"}
+# Решение задачи через list
+season_by_month2 = [
+    "зима",
+    "зима",
+    "весна",
+    "весна",
+    "весна",
+    "лето",
+    "лето",
+    "лето",
+    "осень",
+    "осень",
+    "осень",
+    "зима",
 ]
 
-season2 = ""
-for item in months_and_seasons:
-    if item["month"] == month:
-        season2 = item["season"]
-        break
 
-print(f"Месяц {month} относится к времени года: {season2}")
+print(f"Месяц {month} относится к времени года: {season_by_month2[month]}")
